@@ -44,7 +44,7 @@ public class Main
             try
             {
                 //Panel que despliega el atributo a calcular
-                eleccionCompleta = (String) JOptionPane.showInputDialog(null,"Seleccione la opcion que desea ejecutar", "ACTIVIDAD 12 Lista de Contactos", JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
+                eleccionCompleta = (String) JOptionPane.showInputDialog(null,"Seleccione la opcion que desea ejecutar", "ACTIVIDAD 13: Anonimos, Lambda y referencias", JOptionPane.QUESTION_MESSAGE, null, opciones, opciones[0]);
                 eleccionSwit = eleccionCompleta.charAt(0);
 
                 switch(eleccionSwit) //Dependiendo de la figura elegida, se ejecuta la acción especifica
@@ -195,14 +195,14 @@ public class Main
                         palabras = crearArrayList(lista6);
                         JOptionPane.showMessageDialog(null, imprimirListaOriginal(palabras), "ACTIVIDAD 13: Anonimos, Lambda y referencias", JOptionPane.INFORMATION_MESSAGE);
                         Collections.sort(palabras,Comparator.comparing(Palabra::getLongitud));
-                        JOptionPane.showMessageDialog(null, imprimirListaOrdenada(palabras,2,2), "ACTIVIDAD 13: Anonimos, Lambda y referencias", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, imprimirListaOrdenada(palabras,2,3), "ACTIVIDAD 13: Anonimos, Lambda y referencias", JOptionPane.INFORMATION_MESSAGE);
                         palabras = null;
                         accionValida = false;
                         break;
 
                     case 'G':
                         //Salir del programa
-                        JOptionPane.showMessageDialog(null,"Programa terminado", "ACTIVIDAD 12 Lista de Contactos", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null,"Programa terminado", "ACTIVIDAD 13: Anonimos, Lambda y referencias", JOptionPane.INFORMATION_MESSAGE);
                         System.exit(0);
                         break;
                 }
@@ -211,12 +211,12 @@ public class Main
             catch(NullPointerException a) //El usuario seleccionó la opcion de cerrar el mensaje o de cancelar
             {
                 //Se pregunta si el usuario desea salir del programa usando unicamente la opcion de si o no
-                salirProceso = JOptionPane.showConfirmDialog(null,"Quiere salir del programa?", "ACTIVIDAD 12 Lista de Contactos", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                salirProceso = JOptionPane.showConfirmDialog(null,"Quiere salir del programa?", "ACTIVIDAD 13: Anonimos, Lambda y referencias", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
 
                 //Si presiona Si
                 if(salirProceso == JOptionPane.YES_OPTION)
                 {
-                    JOptionPane.showMessageDialog(null,"Programa terminado", "ACTIVIDAD 12 Lista de Contactos", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null,"Programa terminado", "ACTIVIDAD 13: Anonimos, Lambda y referencias", JOptionPane.INFORMATION_MESSAGE);
                     System.exit(0);
                 }
 
@@ -229,7 +229,7 @@ public class Main
 
             catch(IndexOutOfBoundsException b) //El usuario no ingresó nada y dió aceptar de todas formas
             {
-                JOptionPane.showMessageDialog(null,"Comando no reconocido, vuelva a intentarlo", "ACTIVIDAD 12 Lista de Contactos", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null,"Comando no reconocido, vuelva a intentarlo", "ACTIVIDAD 13: Anonimos, Lambda y referencias", JOptionPane.ERROR_MESSAGE);
                 accionValida = false;
             }
         }
